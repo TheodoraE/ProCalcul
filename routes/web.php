@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CalculController;
+use App\Http\Controllers\DailyController;
+use App\Http\Controllers\RepertoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Calcul => welcome
+Route::get('/', [CalculController::class, 'index']);
+
+
+// Répertoire
+Route::get('/repertory', [RepertoryController::class, 'index']);
+
+
+// Journalier
+Route::get('/daily', [DailyController::class, 'index']);
