@@ -17,7 +17,7 @@ class RepertoryController extends Controller
         $specialProducts = Aliment::where('type', "Produits spéciaux")->get();
         $homeFoods = Aliment::where('type', "Plats maison")->get();
         // dd($vegetables);
-        return view('pages/repertory', compact('repertories', 'vegetables', 'fruits', 'juiceVegetables', 'juiceFruits', 'divers', 'specialProducts', 'homeFood'));
+        return view('pages/repertory', compact('repertories', 'vegetables', 'fruits', 'juiceVegetables', 'juiceFruits', 'divers', 'specialProducts', 'homeFoods'));
     }
 
 

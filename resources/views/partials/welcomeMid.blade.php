@@ -1,33 +1,35 @@
-<div class="m-5 d-flex align-items-center">
+<div class="container">
+    <form action="/add-daily" method="POST">
+        @csrf
 
-    <div class="col-2 my-5">
-        <label for="">Insérez la quantité en grammes (g)</label>
-        <input type="number" name="quantity">
-    </div>
+        {{-- Quantité --}}
+        <div class="form-group my-5">
+            <label for="Quantity">Insérez la quantité en grammes (g)</label>
+            <input id="inputQtt" type="number" name="quantity" class="form-control">
+        </div>
 
-    <div class="form-group col-4 my-5">
-        <label for="exampleFormControlSelect1">Sélectionnez l'aliment : </label>
-        <select class="form-control" id="exampleFormControlSelect1">
-            @foreach ($repertories as $repertory)
-                <option>{{$repertory->name. ' ' .$repertory->proteins_100g}}</option>
-            @endforeach
-        </select>
-      </div>
+        {{-- Aliment --}}
+        <div class="form-group my-5">
+            <label for="Name">Sélectionnez l'aliment : </label>
+            <select id="selectName" class="form-control" name="name">
+                @foreach ($repertories as $repertory)
+                    <option value="{{$repertory->name}}">{{$repertory->name. ' ' .$repertory->proteins_100g}}</option>
+                @endforeach
+            </select>
+        </div>
 
-    <div class="col-2 my-5">
-        <button type="button" class="btn btn-primary">Calculer</button>
-    </div>
+        {{-- Bouton pour calculer --}}
+        <div class="form-group my-5">
+            <button id="btnCalcul" type="button" class="btn btn-primary">Calculer</button>
+        </div>
 
-    <div class="col-2 my-5">
-        <Span>Résultat :</Span>
-        <span> <b class="text-danger">X</b> g</span>
-    </div>
+        {{-- Résultat --}}
+        <div class="form-group my-5">
+            <label for="Proteins">Résultat : </label>
+            <input id="inputResult" type="number" disabled name="proteins" value="" class="form-control ">
+        </div>
 
-    <div class="col-2 my-5">
-        <form action="/add-daily" method="POST">
-            @csrf
-            <button type="submit" class="btn btn-success">Ajouter à l'apport journalier</button>
-        </form>
-    </div>
-
+        {{-- Bouton pour envoyer --}}
+        <button type="submit" class="btn btn-success">Ajouter à l'apport journalier</button>
+    </form>
 </div>
