@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCalculUsersTable extends Migration
+class CreateMaxProteinsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateCalculUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('calcul_users', function (Blueprint $table) {
+        Schema::create('max_proteins', function (Blueprint $table) {
             $table->id();
-            $table->decimal('daily_proteins');
-            // $table->decimal('proteins_left');
+            $table->decimal('max_proteins');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateCalculUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calcul_users');
+        Schema::dropIfExists('max_proteins');
     }
 }

@@ -3,14 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aliment;
+use App\Models\CalculUser;
+use App\Models\MaxProtein;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class CalculController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $repertories = Aliment::all();
-        return view('welcome', compact('repertories'));
+        $calculUsers = CalculUser::all();
+        $maxProteins = MaxProtein::all();
+
+        return view('welcome', compact('repertories', 'calculUsers', 'maxProteins'));
     }
 
+    // public function create()
+    // {
+    //     return view('welcome');
+    // }
+
+    public function store(Request $request)
+    {
+        $store = new User();
+
+        $store->name = $request->name;
+        $store->quantity = $request->quantity;
+        $store->proteins = $request->proteins;
+
+        $store->save();
+        return redirect()->back();
+    }
 
 }

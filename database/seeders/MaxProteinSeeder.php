@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class CalculUserSeeder extends Seeder
+class MaxProteinSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,10 @@ class CalculUserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('calcul_users')->insert(
+        DB::table('max_proteins')->insert(
             [
                 [
-                    'daily_proteins' => 0.00
+                    'max_proteins' => 20.00
                 ]
             ]
         );

@@ -17,7 +17,7 @@
                     <td>{{$user->proteins}}</td>
                     <td>{{$user->updated_at}}</td>
                     <td>
-                        <form action="" method="POST">
+                        <form action="/destroy-one/{{$user->id}}" method="POST">
                             @csrf
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                         </form>

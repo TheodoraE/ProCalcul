@@ -9,7 +9,7 @@
         <label for="exampleFormControlSelect1">Sélectionnez l'aliment : </label>
         <select class="form-control" id="exampleFormControlSelect1">
             @foreach ($repertories as $repertory)
-                <option>{{$repertory->name}}</option>
+                <option>{{$repertory->name. ' ' .$repertory->proteins_100g}}</option>
             @endforeach
         </select>
       </div>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="col-2 my-5">
-        <form action="">
+        <form action="/add-daily" method="POST">
             @csrf
             <button type="submit" class="btn btn-success">Ajouter à l'apport journalier</button>
         </form>
