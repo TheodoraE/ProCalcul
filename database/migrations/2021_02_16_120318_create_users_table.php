@@ -16,8 +16,8 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->decimal('quantity');
-            $table->decimal('proteins');
+            $table->float('quantity', 8, 2);
+            $table->float('proteins', 8, 2);
             $table->timestamps();
         });
     }

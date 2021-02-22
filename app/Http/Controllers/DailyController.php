@@ -35,14 +35,14 @@ class DailyController extends Controller
         $update->max_proteins = $request->max_proteins;
         $update->save();
 
-        return redirect('/');
+        return redirect('/', compact('maxProteins', 'users'));
     }
 
     public function destroy($id)
     {
         $destroy = User::find($id);
         $destroy->delete();
-        return redirect('/');
+        return view('pages/daily');
     }
 
     public function destroyALL()

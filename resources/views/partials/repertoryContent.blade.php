@@ -7,15 +7,15 @@
         <form action="/list-show">
             <div class="form-group">
                 <label for="repertory">Afficher : </label>
-                <select class="form-control" id="repertory" onchange="change(this.value)">
+                <select class="form-control" id="repertory">
                   <option value="Tous">Tous</option>
                   <option value="Légumes">Légumes</option>
                   <option value="Fruits">Fruits</option>
-                  <option value="Jus de légumes">Jus de légumes</option>
-                  <option value="Jus de fruits">Jus de fruits</option>
+                  <option value="JusDeLégumes">Jus de légumes</option>
+                  <option value="JusDeFruits">Jus de fruits</option>
                   <option value="Divers">Divers</option>
-                  <option value="Produits spéciaux">Produits spéciaux</option>
-                  <option value="Plats maison">Plats maison</option>
+                  <option value="ProduitSpéciaux">Produits spéciaux</option>
+                  <option value="PlatMaison">Plats maison</option>
                 </select>
             </div>
         </form>

@@ -7,14 +7,31 @@
           </tr>
         </thead>
         <tbody>
+          {{-- Faire un Switch
+            Essayer de changer l'url avec l'elément que j'ai séléctionner pour pouvoir trigger la value --}}
+          {{-- @switch($select.value)
+              @case("Tous")
+                  @foreach ($repertories as $repertory)
+                    <tr>
+                        <th scope="row">{{$repertory->name}}</th>
+                        <td class="text-center">{{$repertory->proteins_100g}}</td>
+                    </tr>         
+                  @endforeach
+                  @break
+              @case(2)
+                  
+                  @break
+              @default
+                  
+          @endswitch --}}
           {{-- @if ( == "Tous") --}}
             {{-- Tous --}}
-            @foreach ($repertories as $repertory)
+            {{-- @foreach ($repertories as $repertory)
                  <tr>
                     <th scope="row">{{$repertory->name}}</th>
                     <td class="text-center">{{$repertory->proteins_100g}}</td>
                 </tr>         
-            @endforeach
+            @endforeach --}}
 
           {{-- @else if()
             {{-- Légumes --}}
