@@ -11,7 +11,7 @@ class DailyController extends Controller
 {
     public function index(){
         // daily + proteins left
-        $calculUser = CalculUser::all();
+        // $calculUser = CalculUser::all();
         // consommation: name, quantity, proteins
         $users = User::all();
 

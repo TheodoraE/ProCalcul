@@ -13,10 +13,9 @@ class CalculController extends Controller
     public function index()
     {
         $repertories = Aliment::all();
-        $calculUsers = CalculUser::all();
-        $maxProteins = MaxProtein::all();
+        $maxProtein = User::first();
 
-        return view('welcome', compact('repertories', 'calculUsers', 'maxProteins'));
+        return view('welcome', compact('repertories', 'maxProtein'));
     }
 
     // public function create()

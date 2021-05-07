@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMaxProteinsTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateMaxProteinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('max_proteins', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->decimal('max_proteins');
+            $table->string('type');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateMaxProteinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('max_proteins');
+        Schema::dropIfExists('types');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCalculUsersTable extends Migration
+class CreateAlimentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateCalculUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('calcul_users', function (Blueprint $table) {
+        Schema::create('aliments', function (Blueprint $table) {
             $table->id();
-            $table->decimal('daily_proteins');
-            // $table->decimal('proteins_left');
+            $table->string('name');
+            $table->decimal('proteinDose');
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('types');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateCalculUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calcul_users');
+        Schema::dropIfExists('aliments');
     }
 }
