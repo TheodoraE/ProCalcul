@@ -26,7 +26,7 @@
         {{-- Résultat --}}
         <div class="form-group my-5">
             <label for="proteins">Résultat : </label>
-            <input id="inputResult" type="number" step="0.01" name="proteins" class="form-control ">
+            <input id="inputResult" type="number" step="0.01" name="proteins" class="form-control" disabled>
         </div>
 
         {{-- Bouton pour envoyer --}}

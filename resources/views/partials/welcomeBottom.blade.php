@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div id="welcomeBottom">
     <h3>Vous êtes actuellement à <span id="dailyProt">
 
         {{-- <input type="number"> --}}

@@ -1,7 +1,9 @@
 @extends('template.main')
 
 @section('content')
-    @include('partials.welcomeHead')
-    @include('partials.welcomeMid')
-    @include('partials.welcomeBottom')
+    <div class="welcomeContent">
+        @include('partials.welcomeHead')
+        @include('partials.welcomeMid')
+        @include('partials.welcomeBottom')
+    </div>
 @endsection
