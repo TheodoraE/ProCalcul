@@ -11,10 +11,12 @@
              <!-- Aliment -->
             <div class="form-group my-5">
                 <label for="name">Sélectionnez l'aliment : </label>
-                <select id="selectName" class="form-control" name="name">
-                    <!-- @foreach ($repertories as $repertory)
-                        <option value="{{$repertory->proteins_100g}}">{{$repertory->name. ' ' .$repertory->proteins_100g}}</option>
-                    @endforeach -->
+                <select v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
+                    <option>Sélectionner...</option>
+                    <option v-for="aliment in aliments"
+                            :value="aliment.id"
+                            :key="aliment.id">{{aliment.name}}
+                    </option>
                 </select>
             </div>
 
@@ -37,8 +39,37 @@
 
 <script>
     export default {
+        props: [
+            'token',
+        ],
+        data() {
+            return {
+                aliments : "",
+                aliment_id : "",
+            };
+        },
+        methods: {
+            getResources(){
+                this.axios
+                    .get("/aliments/getResources")
+                    .then((res) => {
+                        console.log(res);
+                        this.aliments = res.data.resource.aliments;
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+            },
+        },
         mounted() {
+            this.getResources();
             console.log('Component mounted.')
         }
     }
 </script>
+
+<style>
+    option{
+        font-size: 15px;
+    }
+</style>

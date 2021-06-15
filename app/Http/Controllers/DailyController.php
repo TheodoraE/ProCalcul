@@ -15,27 +15,27 @@ class DailyController extends Controller
         // consommation: name, quantity, proteins
         $users = User::all();
 
-        $maxProteins = MaxProtein::all();
-        return view('pages/daily', compact('calculUser', 'users', 'maxProteins'));
+        // $maxProteins = MaxProtein::all();
+        return view('pages/daily', compact('users'));
     }
 
     public function edit($id)
     {
-        $edit = MaxProtein::find($id);
-        return view('pages/edit', compact('edit'));
+        // $edit = MaxProtein::find($id);
+        // return view('pages/edit', compact('edit'));
     }
 
     public function update(Request $request, $id)
     {
-        $maxProteins = MaxProtein::all();
-        $users = User::all();
+        // $maxProteins = MaxProtein::all();
+        // $users = User::all();
 
 
-        $update = MaxProtein::find($id);
-        $update->max_proteins = $request->max_proteins;
-        $update->save();
+        // $update = MaxProtein::find($id);
+        // $update->max_proteins = $request->max_proteins;
+        // $update->save();
 
-        return redirect('/', compact('maxProteins', 'users'));
+        // return redirect('/', compact('maxProteins', 'users'));
     }
 
     public function destroy($id)

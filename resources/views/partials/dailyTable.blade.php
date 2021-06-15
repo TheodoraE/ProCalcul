@@ -10,20 +10,20 @@
           </tr>
         </thead>
         <tbody>
-            @foreach ($users as $user)
+            {{-- @foreach ($users as $user) --}}
                 <tr>
-                    <th scope="row">{{$user->name}}</th>
-                    <td>{{$user->quantity}}</td>
-                    <td>{{$user->proteins}}</td>
-                    <td>{{$user->updated_at}}</td>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
-                        <form action="/destroy-one/{{$user->id}}" method="POST">
+                        <form action="/destroy-one/" method="POST">
                             @csrf
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                         </form>
                     </td>
                 </tr>  
-            @endforeach
+            {{-- @endforeach --}}
         </tbody>
     </table>
 </div>

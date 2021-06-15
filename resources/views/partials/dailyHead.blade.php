@@ -3,7 +3,7 @@
         <h1 class="text-center">Apport journalier</h1>
     </div>
     <div>
-        <h4>Votre barème de protéines maximales : <span> <b> <a href="/edit-max/{{$maxProteins[0]->id}}">{{$maxProteins[0]->max_proteins}}</a></b> </span> grammes par jour</h4>
+        <h4>Votre barème de protéines maximales : <span> <b> <a href="/edit-max/"></a></b> </span> grammes par jour</h4>
     </div>
     <div class="d-flex justify-content-around w-25 my-4">
         <p>Remettre la table à 0 : </p>

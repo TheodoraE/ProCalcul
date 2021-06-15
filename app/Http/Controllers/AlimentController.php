@@ -2,10 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aliment;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class AlimentController extends Controller
 {
+    public function getResources(){
+
+        $resource = [];
+
+        $resource['aliments'] = Aliment::getActives();
+
+        return response()->json(['resource' => $resource], JsonResponse::HTTP_OK);
+    }
+
     /**
      * Display a listing of the resource.
      *
