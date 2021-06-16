@@ -8,7 +8,6 @@
             <Calcul token="{{csrf_token()}}"></Calcul>
         </div>
 
-        {{-- @include('partials.welcomeMid') --}}
         @include('partials.welcomeBottom')
     </div>
 @endsection
