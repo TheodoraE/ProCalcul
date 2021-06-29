@@ -12,4 +12,8 @@ class Type extends Model
     public function aliments(){
         return $this->hasMany(Aliment::class, "type_id");
     }
+
+    public static function getActives(){
+        return Type::where('active', true)->get();
+    }
 }

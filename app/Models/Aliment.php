@@ -19,4 +19,9 @@ class Aliment extends Model
     public static function getActives(){
         return Aliment::where('active', true)->with('types')->get();
     }
+
+    // Simple foreign key
+    public static function getByType($type){
+        return Aliment::where('active',true)->where("type_id", $type)->with('types')->get();
+    }
 }

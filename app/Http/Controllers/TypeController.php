@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Type;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class TypeController extends Controller
@@ -81,5 +82,14 @@ class TypeController extends Controller
     public function destroy(Type $type)
     {
         //
+    }
+
+    public function getType(){
+
+        $resource = [];
+
+        $resource['types'] = Type::getActives();
+
+        return response()->json(['resource' => $resource], JsonResponse::HTTP_OK);
     }
 }

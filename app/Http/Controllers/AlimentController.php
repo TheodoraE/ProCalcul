@@ -92,4 +92,18 @@ class AlimentController extends Controller
     {
         //
     }
+
+    
+    public function getAliment($type = "all"){
+
+        $resource = [];
+
+        if($type == "all"){
+            $resource['aliments'] = Aliment::getActives();
+        } else {
+            $resource['aliments'] = Aliment::getByType($type);
+        }
+
+        return response()->json(['resource' => $resource], JsonResponse::HTTP_OK);
+    }
 }

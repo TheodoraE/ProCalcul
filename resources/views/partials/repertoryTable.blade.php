@@ -7,6 +7,12 @@
           </tr>
         </thead>
         <tbody>
+          @foreach ($repertories as $repertory)
+            <tr>
+                <th scope="row">{{$repertory->name}}</th>
+                <td class="text-center">{{$repertory->proteinDose}}</td>
+            </tr>         
+          @endforeach
           {{-- Faire un Switch
             Essayer de changer l'url avec l'elément que j'ai séléctionner pour pouvoir trigger la value --}}
           {{-- @switch($select.value)

@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AlimentController;
+use App\Http\Controllers\CalculController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\RepertoryController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,18 +19,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Welcome
-Route::resource('/', CalculController::class);
 Route::get('/aliments/getResources',  [AlimentController::class, 'getResources']);
+Route::resource('/', CalculController::class);
 
 
 
 
 // Répertoire / Repertory
+Route::get('types/getType/', [TypeController::class, 'getType']);
 Route::resource('/repertory', RepertoryController::class);
 
 // Journalier / Daily
-Route::resource('/daily', DailyController::class);
 // Route::post('/destroy-all', [DailyController::class, 'destroyALL']);
+Route::resource('/daily', DailyController::class);
 
 
 // // Journalier
