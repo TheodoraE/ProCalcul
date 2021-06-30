@@ -5,5 +5,11 @@ import Repertory from './components/RepertoryList.vue';
 import VueAxios from 'vue-axios';
 import axios from 'axios';
 
-createApp(Calcul).use(VueAxios, axios).mount("#app");
-createApp(Repertory).use(VueAxios, axios).mount("#repertory");
+
+// Ajouter condition d'affichage pour les différentes pages
+// Current url
+if(window.location.pathname == "/"){
+    createApp(Calcul).use(VueAxios, axios).mount("#app");
+} else if(window.location.pathname == "/repertory"){
+    createApp(Repertory).use(VueAxios, axios).mount("#repertory");
+}
