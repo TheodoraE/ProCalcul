@@ -19,15 +19,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Welcome
+    // API Aliments
 Route::get('/aliments/getResources',  [AlimentController::class, 'getResources']);
+///////
 Route::resource('/', CalculController::class);
 
 
 
-
 // Répertoire / Repertory
+    // API Aliments du type
+Route::get('/aliments/getAliment/{type?}',  [AlimentController::class, 'getAliment']);
+    // API Type
 Route::get('types/getType/', [TypeController::class, 'getType']);
+///////
 Route::resource('/repertory', RepertoryController::class);
+
 
 // Journalier / Daily
 // Route::post('/destroy-all', [DailyController::class, 'destroyALL']);

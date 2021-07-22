@@ -2,5 +2,5 @@
 
 @section('content')
     @include('partials.repertoryContent')
-    @include('partials.repertoryTable')
+    {{-- @include('partials.repertoryTable') --}}
 @endsection
