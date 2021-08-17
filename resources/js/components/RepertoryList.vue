@@ -26,6 +26,8 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Pagination  -->
   
 </template>
 

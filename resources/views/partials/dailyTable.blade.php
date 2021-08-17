@@ -10,12 +10,12 @@
           </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($users as $user) --}}
+            @foreach ($dailyUsers as $dailyUser)
                 <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th scope="row">{{$dailyUser->aliments->name}}</th>
+                    <td>{{$dailyUser->quantity}}</td>
+                    <td>{{$dailyUser->proteins}}</td>
+                    <td>{{$dailyUser->updated_at}}</td>
                     <td>
                         <form action="/destroy-one/" method="POST">
                             @csrf
@@ -23,7 +23,7 @@
                         </form>
                     </td>
                 </tr>  
-            {{-- @endforeach --}}
+            @endforeach
         </tbody>
     </table>
 </div>
