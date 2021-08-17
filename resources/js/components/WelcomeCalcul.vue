@@ -47,6 +47,7 @@
             return {
                 aliments : "",
                 aliment_id : "",
+                aliment_name : "",
                 
                 inputQtt : "",
                 quantiteValue : "",
@@ -71,7 +72,7 @@
             selectAliment(){
                 // Choisir l'aliment par l'apport en protéines
                 this.aliment_protein = parseFloat(selectName.value);
-                console.log('ICIII');
+                console.log('ICIII' + this.aliment_name);
                 console.log(this.aliment_protein);
             },
             // Calcul des doses
@@ -81,7 +82,7 @@
                 // console.log(this.quantiteValue);
 
                 this.valueResult = parseFloat((this.aliment_protein/100)*this.quantiteValue).toFixed(2);
-                console.log(this.valueResult + ' ' + this.selectName.value);
+                console.log(this.valueResult);
             }
         },
         mounted() {
