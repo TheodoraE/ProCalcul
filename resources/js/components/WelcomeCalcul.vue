@@ -45,7 +45,6 @@
         data() {
             return {
                 aliments : "",
-                aliment_name : "",
                 aliment_id : "",
                 
                 inputQtt : "",
@@ -78,7 +77,7 @@
                 // console.log(this.aliment_protein);
 
                 this.valueResult = parseFloat((this.aliment_protein/100)*this.quantiteValue).toFixed(2);
-                console.log(this.valueResult + ' ' + this.aliment_name);
+                console.log(this.valueResult);
             }
         },
         mounted() {
