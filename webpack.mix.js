@@ -15,8 +15,3 @@ mix.js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();
-
-// new webpack.DefinePlugin({
-//     __VUE_OPTIONS_API__ = true,
-//     __VUE_PROD_DEVTOOLS__ = false
-// });
