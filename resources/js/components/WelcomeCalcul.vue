@@ -13,7 +13,8 @@
                 <label for="name">Sélectionnez l'aliment : </label>
                 <select id="selectName" v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
                     <option>Sélectionner...</option>
-                    <option v-for="aliment in aliments"
+                    <option @click="selectAliment()"
+                            v-for="aliment in aliments"
                             :value="aliment.proteinDose"
                             :key="aliment.id">{{aliment.name}}
                     </option>
@@ -66,15 +67,18 @@
                         console.log(err);
                     });
             },
+            // Sélectionner l'aliment
+            selectAliment(){
+                // Choisir l'aliment par l'apport en protéines
+                this.aliment_protein = parseFloat(selectName.value);
+                console.log('ICIII');
+                console.log(this.aliment_protein);
+            },
             // Calcul des doses
             calculTotal(){
                 // Choisir la quantité de nourriture
                 this.quantiteValue = parseFloat(inputQtt.value);
                 // console.log(this.quantiteValue);
-
-                // Choisir l'aliment par l'apport en protéines
-                this.aliment_protein = parseFloat(selectName.value);
-                // console.log(this.aliment_protein);
 
                 this.valueResult = parseFloat((this.aliment_protein/100)*this.quantiteValue).toFixed(2);
                 console.log(this.valueResult);
