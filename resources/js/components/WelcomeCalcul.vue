@@ -11,10 +11,10 @@
              <!-- Aliment -->
             <div class="form-group my-5">
                 <label for="name">Sélectionnez l'aliment : </label>
-                <select id="selectName" v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
+                <select @click="selectAliment()"
+                    id="selectName" v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
                     <option>Sélectionner...</option>
-                    <option @click="selectAliment()"
-                            v-for="aliment in aliments"
+                    <option v-for="aliment in aliments"
                             :value="aliment.proteinDose"
                             :key="aliment.id">{{aliment.name}}
                     </option>
