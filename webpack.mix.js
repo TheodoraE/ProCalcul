@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const webpack = require('webpack');
 
 /*
  |--------------------------------------------------------------------------
@@ -10,6 +11,14 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.webpackConfig({
+    plugins: [
+        new webpack.DefinePlugin({
+            VUE_OPTIONS_API: true,
+            VUE_PROD_DEVTOOLS: false,
+        }),
+    ],
+});
 
 mix.js('resources/js/app.js', 'public/js')
     .vue()
