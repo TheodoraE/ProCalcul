@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aliment;
-use App\Models\CalculUser;
-use App\Models\MaxProtein;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -12,7 +10,7 @@ class CalculController extends Controller
 {
     public function index()
     {
-        $repertories = Aliment::all();
+        $repertories = Aliment::getActives();
         $maxProtein = User::first();
 
         return view('welcome', compact('repertories', 'maxProtein'));
