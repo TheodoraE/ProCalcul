@@ -5,7 +5,8 @@
             <!-- Quantité -->
             <div class="form-group my-5">
                 <label for="quantity">Insérez la quantité en grammes (g)</label>
-                <input id="inputQtt" type="number" name="quantity" class="form-control">
+                <input @change="qttAliment()"
+                    id="inputQtt" type="number" name="quantity" class="form-control">
             </div>
 
              <!-- Aliment -->
@@ -47,7 +48,6 @@
             return {
                 aliments : "",
                 aliment_id : "",
-                aliment_name : "",
                 
                 inputQtt : "",
                 quantiteValue : "",
@@ -61,33 +61,33 @@
                 this.axios
                     .get("/aliments/getResources")
                     .then((res) => {
-                        console.log(res);
+                        // console.log(res);
                         this.aliments = res.data.resource.aliments;
                     })
                     .catch((err) => {
-                        console.log(err);
+                        // console.log(err);
                     });
+            },
+            // Choisir la quantité de nourriture
+            qttAliment(){
+                this.quantiteValue = parseFloat(inputQtt.value);
+                // console.log(this.quantiteValue);
             },
             // Sélectionner l'aliment
             selectAliment(){
                 // Choisir l'aliment par l'apport en protéines
                 this.aliment_protein = parseFloat(selectName.value);
-                console.log('ICIII' + this.aliment_name);
-                console.log(this.aliment_protein);
+                // console.log(this.aliment_protein);
             },
             // Calcul des doses
             calculTotal(){
-                // Choisir la quantité de nourriture
-                this.quantiteValue = parseFloat(inputQtt.value);
-                // console.log(this.quantiteValue);
-
                 this.valueResult = parseFloat((this.aliment_protein/100)*this.quantiteValue).toFixed(2);
                 console.log(this.valueResult);
             }
         },
         mounted() {
             this.getResources();
-            console.log('Component mounted.');
+            // console.log('Component mounted.');
         }
     }
 </script>
