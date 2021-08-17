@@ -3535,7 +3535,7 @@ input[type=button].btn-block {
   width: 1rem;
   height: 1rem;
   content: "";
-  background: 50%/50% 50% no-repeat;
+  background: 50% / 50% 50% no-repeat;
 }
 
 .custom-checkbox .custom-control-label::before {
@@ -10000,5 +10000,52 @@ h3 {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6;
+  }
+}
+body {
+  background-color: lightblue;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  body {
+    background-color: salmon;
+  }
+
+  .welcomeContent {
+    margin: 5%;
+  }
+
+  #welcomeHeadTitle {
+    margin: 10% 0% 5% 0%;
+  }
+
+  #welcomeHeadTitle h1 {
+    font-size: 30px;
+  }
+
+  #welcomeHeadAbout h3 {
+    font-size: 20px;
+    text-justify: distribute;
+    margin: 0% 0% 5% 0%;
+  }
+
+  #welcomeHeadAbout h5 {
+    font-size: 15px;
+    text-justify: distribute-all-lines;
+  }
+
+  #welcomeBottom {
+    margin: 10% 0% 5% 0%;
+  }
+
+  #welcomeBottom h3 {
+    font-size: 22px;
+    text-align: center;
+    text-justify: distribute;
   }
 }
