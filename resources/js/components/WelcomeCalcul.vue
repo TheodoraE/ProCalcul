@@ -81,7 +81,7 @@
                 // console.log(this.quantiteValue);
 
                 this.valueResult = parseFloat((this.aliment_protein/100)*this.quantiteValue).toFixed(2);
-                console.log(this.valueResult);
+                console.log(this.valueResult + ' ' + this.selectName.value);
             }
         },
         mounted() {
