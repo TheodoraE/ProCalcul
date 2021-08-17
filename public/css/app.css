@@ -10006,6 +10006,41 @@ body {
   background-color: lightblue;
 }
 
+.welcomeContent {
+  margin: 2% 5% 3% 5%;
+}
+
+#welcomeHeadTitle {
+  margin: 3% 0%;
+}
+
+#welcomeHeadTitle h1 {
+  margin: 0%;
+}
+
+#welcomeHeadAbout {
+  text-align: center;
+}
+
+#welcomeHeadAbout h3 {
+  margin: 0% 0% 2% 0%;
+}
+
+.calculBtn {
+  display: flex;
+  justify-content: center;
+}
+
+#welcomeBottom {
+  margin: 2% 0% 3% 0%;
+}
+
+#welcomeBottom h3 {
+  font-size: 22px;
+  text-align: center;
+  text-justify: distribute;
+}
+
 @media (min-width: 600px) and (max-width: 1023px) {
   body {
     background-color: lightgreen;
@@ -10014,38 +10049,5 @@ body {
 @media (min-width: 320px) and (max-width: 599px) {
   body {
     background-color: salmon;
-  }
-
-  .welcomeContent {
-    margin: 5%;
-  }
-
-  #welcomeHeadTitle {
-    margin: 10% 0% 5% 0%;
-  }
-
-  #welcomeHeadTitle h1 {
-    font-size: 30px;
-  }
-
-  #welcomeHeadAbout h3 {
-    font-size: 20px;
-    text-justify: distribute;
-    margin: 0% 0% 5% 0%;
-  }
-
-  #welcomeHeadAbout h5 {
-    font-size: 15px;
-    text-justify: distribute-all-lines;
-  }
-
-  #welcomeBottom {
-    margin: 10% 0% 5% 0%;
-  }
-
-  #welcomeBottom h3 {
-    font-size: 22px;
-    text-align: center;
-    text-justify: distribute;
   }
 }
