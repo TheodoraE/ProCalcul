@@ -61,23 +61,23 @@
                 this.axios
                     .get("/aliments/getResources")
                     .then((res) => {
-                        // console.log(res);
+                        console.log(res);
                         this.aliments = res.data.resource.aliments;
                     })
                     .catch((err) => {
-                        // console.log(err);
+                        console.log(err);
                     });
             },
             // Choisir la quantité de nourriture
             qttAliment(){
                 this.quantiteValue = parseFloat(inputQtt.value);
-                // console.log(this.quantiteValue);
+                console.log(this.quantiteValue);
             },
             // Sélectionner l'aliment
             selectAliment(){
                 // Choisir l'aliment par l'apport en protéines
                 this.aliment_protein = parseFloat(selectName.value);
-                // console.log(this.aliment_protein);
+                console.log(this.aliment_protein);
             },
             // Calcul des doses
             calculTotal(){
@@ -87,7 +87,7 @@
         },
         mounted() {
             this.getResources();
-            // console.log('Component mounted.');
+            console.log('Component mounted.');
         }
     }
 </script>
