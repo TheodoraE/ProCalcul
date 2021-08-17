@@ -11,7 +11,7 @@
              <!-- Aliment -->
             <div class="form-group my-5">
                 <label for="name">Sélectionnez l'aliment : </label>
-                <select @click="selectAliment()"
+                <select @change="selectAliment()"
                     id="selectName" v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
                     <option>Sélectionner...</option>
                     <option v-for="aliment in aliments"
