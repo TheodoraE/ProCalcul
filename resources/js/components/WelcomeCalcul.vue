@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <form action="store-daily" method="POST">
+        <form action="/" method="POST" v-on:submit.prevent="saveForm">
 
             <div class="row">
                 <!-- Quantité -->
@@ -44,13 +44,16 @@
 <script>
     export default {
         props: [
-            'token',
+            // Les props ne passent pas
+            'token'
         ],
         data() {
             return {
+                // _token: csrf_token,
                 aliments : "",
                 aliment_id : "",
                 
+                    // Calcul
                 inputQtt : "",
                 quantiteValue : "",
                 selectName : "",
@@ -85,6 +88,20 @@
             calculTotal(){
                 this.valueResult = parseFloat((this.aliment_protein/100)*this.quantiteValue).toFixed(2);
                 console.log(this.valueResult);
+            },
+            ///// Enregistrer l'aliment
+            saveForm() {
+                this.axios
+                .post("/dailyUser/handle" , { aliment_id : this.aliment_protein, quantity : this.quantiteValue, proteins : this.valueResult})
+
+                .then((res) => {
+                    console.log(res);
+                    console.log('then');
+                })
+                .catch((err) => {
+                    alert('erreur formulaire');
+                    console.log(err);
+                });
             }
         },
         mounted() {

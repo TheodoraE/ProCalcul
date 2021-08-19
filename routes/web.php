@@ -3,6 +3,7 @@
 use App\Http\Controllers\AlimentController;
 use App\Http\Controllers\CalculController;
 use App\Http\Controllers\DailyController;
+use App\Http\Controllers\DailyuserController;
 use App\Http\Controllers\RepertoryController;
 use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/aliments/getResources',  [AlimentController::class, 'getResources']);
 ///////
 Route::resource('/', CalculController::class);
+Route::post('dailyUser/handle', [DailyuserController::class, 'store']);
 
 ////// 2nd page
 // Répertoire / Repertory

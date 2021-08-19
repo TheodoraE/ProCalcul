@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dailyuser;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class DailyuserController extends Controller
@@ -33,20 +34,26 @@ class DailyuserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function storeDaily(Request $request)
-    // {
-    //     $store = new Dailyuser();
+    public function store(Request $request)
+    {
+        $validation = $request->validate([
+            "aliment_id" => 'required|integer',
+            "quantity" => 'required|integer',
+            "proteins" => 'required|integer',
+        ]);
 
-    //     // $store->aliment_id = $request->id;
-    //     // $store->quantity = $request->quantity;
-    //     // $store->proteins = $request->proteins;
+        $newEntry = new Dailyuser;
+        $newEntry->aliment_id = $request->id;
+        $newEntry->quantity = $request->quantity;
+        $newEntry->proteins = $request->proteins;
+        // $newEntry->aliment_id = 1;
+        // $newEntry->quantity = 1;
+        // $newEntry->proteins = 1;
 
-    //     $store->aliment_id = 1;
-    //     $store->quantity = 1;
-    //     $store->proteins = 1;
-    //     $store->save();
-    //     return redirect('/');
-    // }
+        $newEntry->save();
+
+        return response()->json(['message' => "Form processed"], JsonResponse::HTTP_OK);
+    }
 
     /**
      * Display the specified resource.

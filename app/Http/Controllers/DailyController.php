@@ -21,21 +21,6 @@ class DailyController extends Controller
         return view('pages/daily', compact('users', 'dailyUsers'));
     }
 
-    public function storeDaily(Request $request)
-    {
-        $store = new Dailyuser();
-
-        // $store->aliment_id = $request->id;
-        // $store->quantity = $request->quantity;
-        // $store->proteins = $request->proteins;
-
-        $store->aliment_id = 1;
-        $store->quantity = 1;
-        $store->proteins = 1;
-        $store->save();
-        return redirect('/');
-    }
-
     public function edit($id)
     {
         // $edit = MaxProtein::find($id);
