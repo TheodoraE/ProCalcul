@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <form action="/add-daily" method="POST">
+        <form action="store-daily" method="POST">
 
             <div class="row">
                 <!-- Quantité -->

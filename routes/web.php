@@ -18,14 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+////// 1st page
 // Welcome
     // API Aliments
 Route::get('/aliments/getResources',  [AlimentController::class, 'getResources']);
 ///////
 Route::resource('/', CalculController::class);
 
-
-
+////// 2nd page
 // Répertoire / Repertory
     // API Aliments du type
 Route::get('/aliments/getAliment/{type?}',  [AlimentController::class, 'getAliment']);
@@ -35,8 +35,10 @@ Route::get('types/getType/', [TypeController::class, 'getType']);
 Route::resource('/repertory', RepertoryController::class);
 
 
+////// 3rd page
 // Journalier / Daily
 // Route::post('/destroy-all', [DailyController::class, 'destroyALL']);
+Route::post('/store-daily', [DailyController::class, 'storeDaily']);
 Route::resource('/daily', DailyController::class);
 
 

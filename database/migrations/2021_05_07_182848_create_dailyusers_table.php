@@ -18,7 +18,6 @@ class CreateDailyusersTable extends Migration
             $table->foreignId('aliment_id')->references('id')->on('aliments');
             $table->float('quantity', 8, 2);
             $table->float('proteins', 8, 2);
-            $table->boolean('active');
             $table->timestamps();
         });
     }

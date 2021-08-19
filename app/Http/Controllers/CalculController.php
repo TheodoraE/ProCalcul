@@ -29,16 +29,19 @@ class CalculController extends Controller
     //     return view('welcome');
     // }
 
-    public function store(Request $request)
-    {
-        $store = new User();
+    // public function storeDaily(Request $request)
+    // {
+    //     $store = new Dailyuser();
 
-        $store->name = $request->name;
-        $store->quantity = $request->quantity;
-        $store->proteins = $request->proteins;
+    //     // $store->aliment_id = $request->id;
+    //     // $store->quantity = $request->quantity;
+    //     // $store->proteins = $request->proteins;
 
-        $store->save();
-        return redirect()->back();
-    }
+    //     $store->aliment_id = 1;
+    //     $store->quantity = 1;
+    //     $store->proteins = 1;
+    //     $store->save();
+    //     return redirect('/');
+    // }
 
 }

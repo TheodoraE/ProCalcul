@@ -33,10 +33,20 @@ class DailyuserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function storeDaily(Request $request)
+    // {
+    //     $store = new Dailyuser();
+
+    //     // $store->aliment_id = $request->id;
+    //     // $store->quantity = $request->quantity;
+    //     // $store->proteins = $request->proteins;
+
+    //     $store->aliment_id = 1;
+    //     $store->quantity = 1;
+    //     $store->proteins = 1;
+    //     $store->save();
+    //     return redirect('/');
+    // }
 
     /**
      * Display the specified resource.
