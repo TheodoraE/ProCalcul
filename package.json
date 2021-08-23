@@ -31,6 +31,7 @@
         "npm-upgrade": "^3.0.0",
         "uuid": "^3.4.0",
         "vue": "^3.2.2",
-        "vue-axios": "^3.2.4"
+        "vue-axios": "^3.2.4",
+        "vue-router": "^4.0.11"
     }
 }
