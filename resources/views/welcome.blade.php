@@ -5,7 +5,9 @@
         @include('partials.welcomeHead')
 
         <div id="app">
-            <Calcul :token="{{csrf_token()}}" />
+
+            {{-- ADD TOKEN IN META HEAD --}}
+            <calcul-aliment :token="{{csrf_token()}}" />
         </div>
 
         @include('partials.welcomeBottom')
