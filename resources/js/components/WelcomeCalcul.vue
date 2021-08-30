@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <form action="/" method="POST" v-on:submit.prevent="saveForm">
-            <Token />
+            <!-- <entree /> -->
             <!-- crsf_token -->
             <!-- <input type="hidden" name="_token" :value="csrf"> -->
             <div class="row">
@@ -44,20 +44,20 @@
 </template>
 
 <script>
-    import Token from './CSRFTokenInput'
+    // import Token from './CSRFTokenInput'
 
     export default {
-        props: [
-            // Les props ne passent pas
-            'token'
-        ],
-        name: 'WelcomeCalcul',
-        components: {
-            Token
-        },
+        // props: [
+        //     // Les props ne passent pas
+        //     'token'
+        // ],
+        // name: 'WelcomeCalcul',
+        // components: {
+        //     'entree': Token
+        // },
         data() {
             return {
-                // _token: csrf_token,
+                _token: csrf_token,
                 aliments : "",
                 aliment_id : "",
                 

@@ -7,7 +7,7 @@
         <div id="app">
 
             {{-- ADD TOKEN IN META HEAD --}}
-            <calcul-aliment :token="{{csrf_token()}}" />
+            <calcul-aliment > </calcul-aliment>
         </div>
 
         @include('partials.welcomeBottom')
