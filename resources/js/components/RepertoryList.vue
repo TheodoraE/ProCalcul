@@ -28,7 +28,7 @@
     </div>
 
     <!-- Pagination  -->
-  
+
 </template>
 
 
@@ -36,6 +36,7 @@
     export default {
         data() {
             return {
+                csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                 aliments: [],
                 types: [],
                 selectedFilter: "all"

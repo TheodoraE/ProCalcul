@@ -3,7 +3,7 @@
         <form action="/" method="POST" v-on:submit.prevent="saveForm">
             <!-- <entree /> -->
             <!-- crsf_token -->
-            <!-- <input type="hidden" name="_token" :value="csrf"> -->
+            <input type="hidden" name="_token" :value="csrf">
             <div class="row">
                 <!-- Quantité -->
                 <div class="form-group mt-4 col-lg-6">
@@ -44,23 +44,14 @@
 </template>
 
 <script>
-    // import Token from './CSRFTokenInput'
 
     export default {
-        // props: [
-        //     // Les props ne passent pas
-        //     'token'
-        // ],
-        // name: 'WelcomeCalcul',
-        // components: {
-        //     'entree': Token
-        // },
         data() {
             return {
-                _token: csrf_token,
+                csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                 aliments : "",
                 aliment_id : "",
-                
+
                     // Calcul
                 inputQtt : "",
                 quantiteValue : "",

@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/aliments/getResources',  [AlimentController::class, 'getResources']);
 ///////
 Route::resource('/', CalculController::class);
-Route::post('dailyUser/handle', [DailyuserController::class, 'store']);
+Route::post('/dailyUser/handle', [DailyuserController::class, 'store']);
 
 ////// 2nd page
 // Répertoire / Repertory
