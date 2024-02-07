@@ -31,6 +31,7 @@
   "dependencies": {
     "npm-upgrade": "^0.3.0",
     "uuid": "^9.0.0",
+    "volar-service-vetur": "^0.0.17",
     "vue": "^3.2.36",
     "vue-axios": "^3.5.2",
     "vue-laravel-csrf": "^1.0.0",
