@@ -1,5 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8"; /*!
+@charset "UTF-8";
+body {
+  background-color: lightblue;
+}
+
+.welcomeContent {
+  margin: 2% 5% 3% 5%;
+}
+
+#welcomeHeadTitle {
+  margin: 3% 0%;
+}
+
+#welcomeHeadTitle h1, #welcomeHeadTitle .h1 {
+  margin: 0%;
+}
+
+#welcomeHeadAbout {
+  text-align: center;
+}
+
+#welcomeHeadAbout h3, #welcomeHeadAbout .h3 {
+  margin: 0% 0% 2% 0%;
+}
+
+.calculBtn {
+  display: flex;
+  justify-content: center;
+}
+
+#welcomeBottom {
+  margin: 2% 0% 3% 0%;
+}
+
+#welcomeBottom h3, #welcomeBottom .h3 {
+  font-size: 22px;
+  text-align: center;
+  text-justify: distribute;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  body {
+    background-color: salmon;
+  }
+}
+/*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
