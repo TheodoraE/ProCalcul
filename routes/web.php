@@ -49,3 +49,7 @@ Route::resource('/daily', DailyController::class);
 // Route::get('/edit-max/{id}', [DailyController::class, 'edit']);
 // Route::post('/update-max/{id}', [DailyController::class, 'update']);
 // Route::post('/destroy-one/{id}', [DailyController::class, 'destroy']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
