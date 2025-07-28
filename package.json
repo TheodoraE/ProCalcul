@@ -12,7 +12,7 @@
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
         "@vue/compiler-sfc": "^3.4.19",
-        "@webpack-cli/generators": "^3.0.7",
+        "@webpack-cli/generators": "^2.5.0",
         "axios": "^1.6.7",
         "bootstrap": "^5.1.3",
         "jquery": "^3.7",
@@ -24,12 +24,13 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "vue-loader": "^17.4.2",
-        "vue-template-compiler": "^2.7.16",
+        "vue-template-compiler": "^0.1.0",
         "webpack": "^5.90.1",
         "webpack-cli": "^5.1.4"
     },
     "dependencies": {
-        "npm-upgrade": "^2.0.4",
+        "npm": "^11.5.1",
+        "npm-upgrade": "^3.1.2",
         "uuid": "^9.0.1",
         "volar-service-vetur": "^0.0.30",
         "vue": "^3.4.19",
