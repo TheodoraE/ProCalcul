@@ -15,7 +15,8 @@ class DailyuserController extends Controller
      */
     public function index()
     {
-        //
+        $dailyusers = Dailyuser::all();
+        return response(compact('dailyusers'), JsonResponse::HTTP_OK);
     }
 
     /**
@@ -37,18 +38,16 @@ class DailyuserController extends Controller
     public function store(Request $request)
     {
         $validation = $request->validate([
-            "aliment_id" => 'required|integer',
-            "quantity" => 'required|integer',
-            "proteins" => 'required|integer',
+            "aliment_id" => 'required|integer|exists:aliments,id',
+            "quantity" => 'required|numeric',
+            "proteins" => 'required|numeric',
         ]);
 
         $newEntry = new Dailyuser;
-        $newEntry->aliment_id = $request->id;
-        $newEntry->quantity = $request->quantity;
-        $newEntry->proteins = $request->proteins;
-        // $newEntry->aliment_id = 1;
-        // $newEntry->quantity = 1;
-        // $newEntry->proteins = 1;
+        // aliment_id is a primitive value from the request, not an object
+        $newEntry->aliment_id = $request->aliment_id;
+        $newEntry->quantity   = $request->quantity;
+        $newEntry->proteins   = $request->proteins;
 
         $newEntry->save();
 

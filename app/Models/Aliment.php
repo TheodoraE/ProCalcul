@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Aliment extends Model
 {
     use HasFactory;
-    
+
     public function types(){
         return $this->belongsTo(Type::class, "type_id");
     }
     public function dailyusers(){
-        return $this->belongsTo(Dailyuser::class, "aliment_id");
+        return $this->hasMany(Dailyuser::class);
     }
 
     public static function getActives(){

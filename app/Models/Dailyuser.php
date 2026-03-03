@@ -9,7 +9,8 @@ class Dailyuser extends Model
 {
     use HasFactory;
 
-    public function aliments(){
-        return $this->hasMany(Aliment::class, "aliment_id");
+    public function aliment()
+    {
+        return $this->belongsTo(Aliment::class);
     }
 }

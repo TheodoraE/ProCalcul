@@ -12,17 +12,17 @@
         <tbody>
             @foreach ($dailyUsers as $dailyUser)
                 <tr>
-                    <th scope="row">{{$dailyUser->aliments->name}}</th>
+                    <th scope="row">{{$dailyUser->aliment->name}}</th>
                     <td>{{$dailyUser->quantity}}</td>
                     <td>{{$dailyUser->proteins}}</td>
                     <td>{{$dailyUser->updated_at}}</td>
                     <td>
-                        <form action="/destroy-one/" method="POST">
+                        <form action="/destroy-one/{{$dailyUser->id}}" method="POST">
                             @csrf
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                         </form>
                     </td>
-                </tr>  
+                </tr>
             @endforeach
         </tbody>
     </table>

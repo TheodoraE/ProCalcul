@@ -1,14 +1,14 @@
 <template>
     <div class="container">
-        <form action="/" method="POST" v-on:submit.prevent="saveForm">
+        <form action="/dailyUser/handle" method="POST" v-on:submit.prevent="saveForm">
+            <!-- CSRF token for Laravel -->
+            <input type="hidden" name="_token" :value="csrf" />
             <!-- <entree /> -->
-            <!-- crsf_token -->
-            <input type="hidden" name="_token" :value="csrf">
             <div class="row">
                 <!-- Quantité -->
                 <div class="form-group mt-4 col-lg-6">
                     <label for="quantity">Insérez la quantité en grammes (g)</label>
-                    <input @change="qttAliment()"
+                    <input v-model.number="quantiteValue"
                         id="inputQtt" type="number" name="quantity" class="form-control">
                 </div>
 
@@ -17,9 +17,9 @@
                     <label for="name">Sélectionnez l'aliment : </label>
                     <select @change="selectAliment()"
                         id="selectName" v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
-                        <option>Sélectionner...</option>
+                        <option value="">Sélectionner...</option>
                         <option v-for="aliment in aliments"
-                                :value="aliment.proteinDose"
+                                :value="aliment.id"
                                 :key="aliment.id">{{aliment.name}}
                         </option>
                     </select>
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+
 
     export default {
         data() {
@@ -73,15 +74,11 @@
                     });
             },
             // Choisir la quantité de nourriture
-            qttAliment(){
-                this.quantiteValue = parseFloat(inputQtt.value);
-                // console.log(this.quantiteValue);
-            },
             // Sélectionner l'aliment
             selectAliment(){
-                // Choisir l'aliment par l'apport en protéines
-                this.aliment_protein = parseFloat(selectName.value);
-                // console.log(this.aliment_protein);
+                // lookup protein dose from the selected id
+                const selected = this.aliments.find(a => a.id == this.aliment_id);
+                this.aliment_protein = selected ? parseFloat(selected.proteinDose) : 0;
             },
             // Calcul des doses
             calculTotal(){
@@ -91,7 +88,10 @@
             ///// Enregistrer l'aliment
             saveForm() {
                 this.axios
-                .post("/dailyUser/handle" , { aliment_id : this.aliment_protein, quantity : this.quantiteValue, proteins : this.valueResult})
+                .post("/dailyUser/handle" ,
+                    { aliment_id : this.aliment_id, quantity : this.quantiteValue, proteins : this.valueResult },
+                    { headers: { 'X-CSRF-TOKEN': this.csrf } }
+                )
 
                 .then((res) => {
                     console.log(res);

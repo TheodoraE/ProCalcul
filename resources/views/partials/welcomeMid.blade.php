@@ -1,3 +1,5 @@
+{{-- NOT NECESSARY --}}
+
 <div class="container">
     <form action="/add-daily" method="POST">
         @csrf
