@@ -39,7 +39,7 @@ Route::resource('/repertory', RepertoryController::class);
 
 ////// 3rd page
 // Journalier / Daily
-// Route::post('/destroy-all', [DailyController::class, 'destroyALL']);
+Route::post('/destroy-all', [DailyController::class, 'destroyALL']);
 Route::post('/store-daily', [DailyController::class, 'storeDaily']);
 Route::resource('/daily', DailyController::class);
 
@@ -48,7 +48,7 @@ Route::resource('/daily', DailyController::class);
 // Route::get('/daily', [DailyController::class, 'index']);
 // Route::get('/edit-max/{id}', [DailyController::class, 'edit']);
 // Route::post('/update-max/{id}', [DailyController::class, 'update']);
-// Route::post('/destroy-one/{id}', [DailyController::class, 'destroy']);
+Route::post('/destroy-one/{id}', [DailyController::class, 'destroy']);
 
 Auth::routes();
 

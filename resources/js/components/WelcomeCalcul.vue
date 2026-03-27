@@ -96,6 +96,7 @@
                 .then((res) => {
                     console.log(res);
                     console.log('then');
+                    window.location.href = '/';
                 })
                 .catch((err) => {
                     alert('erreur formulaire');

@@ -2,9 +2,9 @@
     <div class="mt-5 w-25">
         <div class="form-group">
             <label for="repertory">Afficher : </label>
-            <select class="form-control" id="repertory">
-                <option @click="selectFilter('all')" :class="{'active': selectedFilter == 'all'}">Tout</option>
-                <option @click="selectFilter(type.id)" v-for="type in types" :key="type.id" class="filter" :class="{'active': selectedFilter == type.id}">{{type.type}}</option>
+            <select v-model="selectedFilter" @change="getAliment()" class="form-control" id="repertory">
+                <option value="all">Tout</option>
+                <option v-for="type in types" :key="type.id" :value="type.id">{{type.type}}</option>
             </select>
         </div>
     </div>
@@ -64,11 +64,6 @@
                     .catch((err) => {
                         console.log(err);
                     });
-            },
-            selectFilter: function(value){
-                this.selectedFilter = value;
-                this.getAliment();
-                console.log(this.selectedFilter);
             }
         },
         mounted() {

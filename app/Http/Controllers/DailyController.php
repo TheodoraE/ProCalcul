@@ -17,6 +17,10 @@ class DailyController extends Controller
         $users = User::all();
         $dailyUsers = Dailyuser::all();
 
+        if ($dailyUsers == null){
+            $dailyUsers = 0;
+        }
+
         // $maxProteins = MaxProtein::all();
         return view('pages/daily', compact('users', 'dailyUsers'));
     }
@@ -44,7 +48,7 @@ class DailyController extends Controller
     {
         $destroy = Dailyuser::find($id);
         $destroy->delete();
-        return view('pages/daily');
+        return redirect('/daily');
     }
 
     public function destroyALL()
@@ -54,6 +58,6 @@ class DailyController extends Controller
         foreach ($destroyALL as $item) {
             $item->delete();
         }
-        return redirect('/');
+        return redirect('/daily');
     }
 }
