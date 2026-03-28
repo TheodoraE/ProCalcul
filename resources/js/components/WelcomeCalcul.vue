@@ -34,11 +34,14 @@
              <!-- Résultat -->
             <div class="form-group my-4">
                 <label for="proteins">Résultat : </label>
-                <input id="inputResult" type="number" step="0.01" name="proteins" class="form-control" :value="valueResult" disabled>
+                <div class="d-flex">
+                    <input id="inputResult" type="number" step="0.01" name="proteins" class="form-control" :value="valueResult" disabled>
+                    <p class="form-text">g de proteines</p>
+                </div>
             </div>
 
              <!-- Bouton pour envoyer -->
-            <button type="submit" class="btn btn-success">Ajouter à l'apport journalier</button>
+            <button type="submit" id="btnAdd" class="btn">Ajouter à l'apport journalier</button>
         </form>
     </div>
 </template>

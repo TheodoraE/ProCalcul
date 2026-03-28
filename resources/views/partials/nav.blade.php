@@ -1,18 +1,18 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid d-flex flex-column">
-        <div class="row justify-content" style="border: 2px solid black">
-            <a class="navbar-brand" href="/">PROTCALCUL</a>
+        <div class="row justify-content">
+            <a class="navbar-brand" href="/"><span>PROTCALCUL</span></a>
         </div>
-        <div class="row" style="border: 2px solid black">
-            <ul class="nav nav-underline">
+        <div class="row">
+            <ul class="nav">
                  <li class="nav-item">
-                    <a class="nav-link active text-center" href="/">CALCULER</a>
+                    <a class="nav-link active text-center" href="/"><span>CALCULER</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/repertory">RÉPERTOIRE</a>
+                    <a class="nav-link" href="/repertory"><span>RÉPERTOIRE</span></a>
                 </li>
-               <li class="nav-item">
-                    <a class="nav-link" href="/daily">SE CONNECTER / S'INSCRIRE</a>
+               <li class="nav-item"> 
+                    <a class="nav-link" href="/daily"><span>SE CONNECTER / S'INSCRIRE</span></a>
                </li>
             </ul>
         </div>

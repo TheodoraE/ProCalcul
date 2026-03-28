@@ -3,8 +3,45 @@ body {
     width: 100%;
 }
 
+// Header
+header {
+    background-color: #ffbd59;
+    height: fit-content;
+}
+
+.container-fluid .row {
+    margin: 0.5%;
+    width: 100%;
+}
+
 .navbar-brand {
-    font-weight: bold;
+    text-align: center;
+}
+
+.navbar-brand span {
+    font-weight: bolder;
+    font-size: 35px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul li {
+    width: 32%;
+    text-align: center;
+    border: solid 3px white;
+}
+
+ul li a span {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .welcomeContent{
@@ -12,24 +49,50 @@ body {
 }
 
 // Head
-#welcomeHeadTitle{
-    margin: 3% 0%;
-}
-#welcomeHeadTitle h1{
-    margin: 0%;
-}
-#welcomeHeadAbout {
+#welcomeDescription {
     text-align: center;
+    margin-top: 5%;
 }
-#welcomeHeadAbout h3{
+#welcomeDescription h3{
     margin: 0% 0% 2% 0%;
 }
 
 // Mid
-    // Centrer le bouton Calculer ???
-.calculBtn {
-    display: flex;
-    justify-content: center;
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input {
+    border: solid 2px #ffbd59;
+}
+
+#btnCalcul {
+    background-color: white;
+    color: #ffbd59;
+    font-size: 18px;
+    font-weight: bold;
+    border: solid 2px #ffbd59;
+    margin: 2% 0%;
+}
+
+#inputResult {
+    width: 25%;
+}
+
+.form-group p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0% 3%;
+    color: black;
+}
+
+#btnAdd {
+    background-color: #ffbd59;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: solid 2px #ffbd59;
 }
 
 // Bottom
