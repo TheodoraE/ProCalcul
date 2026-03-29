@@ -17,7 +17,7 @@
                     <label for="name">Sélectionnez l'aliment : </label>
                     <select @change="selectAliment()"
                         id="selectName" v-model="aliment_id" class="form-control" name="aliment_id" aria-label="Séléctionnez un aliment">
-                        <option value="">Sélectionner...</option>
+                        <option value="" id="optionText">Sélectionner...</option>
                         <option v-for="aliment in aliments"
                                 :value="aliment.id"
                                 :key="aliment.id">{{aliment.name}}

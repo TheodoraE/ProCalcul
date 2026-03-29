@@ -16,6 +16,21 @@ header {
   width: 100%;
 }
 
+.navbar .nav-link {
+  color: #212529;
+}
+
+.navbar .nav-link.active {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 2px;
+}
+
+.navbar .nav-link:hover {
+  color: #ffbd59;
+}
+
 .navbar-brand {
   text-align: center;
 }
@@ -60,21 +75,27 @@ ul li a span {
 }
 
 label {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  margin-bottom: 1%;
 }
 
-input {
+#inputQtt, #selectName, #inputResult {
   border: solid 2px #ffbd59;
+  font-size: 18px;
+}
+
+#selectName option {
+  font-size: 18px;
 }
 
 #btnCalcul {
   background-color: white;
   color: #ffbd59;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   border: solid 2px #ffbd59;
-  margin: 2% 0%;
+  margin: 2.5% 0%;
 }
 
 #inputResult {
@@ -82,7 +103,7 @@ input {
 }
 
 .form-group p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0% 3%;
   color: black;
@@ -91,19 +112,23 @@ input {
 #btnAdd {
   background-color: #ffbd59;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   border: solid 2px #ffbd59;
+  margin-top: 1.5%;
 }
 
-#welcomeBottom {
+#welcomeDescription {
+  margin: 5% 0% 3% 0%;
+}
+
+#welcomeDescription h2, #welcomeDescription .h2 {
   margin: 2% 0% 3% 0%;
 }
 
-#welcomeBottom h3, #welcomeBottom .h3 {
-  font-size: 22px;
-  text-align: center;
-  text-justify: distribute;
+#welcomeDescription h3 a, #welcomeDescription .h3 a {
+  text-decoration: none;
+  color: #ffbd59;
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -116,6 +141,32 @@ input {
     background-color: salmon;
   }
 }
+#repertory select {
+  border: solid 2px #ffbd59;
+  font-size: 18px;
+}
+
+#repertory select option {
+  font-size: 18px;
+}
+
+.table {
+  font-size: 18px;
+}
+
+.headers th {
+  color: #ffbd59;
+}
+
+.dailyActions p {
+  font-size: 18px;
+  margin-right: 3%;
+}
+
+#dailyTable th {
+  width: 25%;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors

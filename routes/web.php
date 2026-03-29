@@ -46,7 +46,7 @@ Route::resource('/daily', DailyController::class);
 
 // // Journalier
 // Route::get('/daily', [DailyController::class, 'index']);
-// Route::get('/edit-max/{id}', [DailyController::class, 'edit']);
+Route::get('/edit-max/{id}', [DailyController::class, 'edit']);
 // Route::post('/update-max/{id}', [DailyController::class, 'update']);
 Route::post('/destroy-one/{id}', [DailyController::class, 'destroy']);
 

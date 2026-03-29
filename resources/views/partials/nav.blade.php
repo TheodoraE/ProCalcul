@@ -4,40 +4,18 @@
             <a class="navbar-brand" href="/"><span>PROTCALCUL</span></a>
         </div>
         <div class="row">
+            @php $currentSegment = Request::segment(1); @endphp
             <ul class="nav">
                  <li class="nav-item">
-                    <a class="nav-link active text-center" href="/"><span>CALCULER</span></a>
+                    <a class="nav-link text-center {{ $currentSegment === null ? 'active' : '' }}" href="/"><span>CALCULER</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/repertory"><span>RÉPERTOIRE</span></a>
+                    <a class="nav-link text-center {{ $currentSegment === 'repertory' ? 'active' : '' }}" href="/repertory"><span>RÉPERTOIRE</span></a>
                 </li>
-               <li class="nav-item"> 
-                    <a class="nav-link" href="/daily"><span>SE CONNECTER / S'INSCRIRE</span></a>
+               <li class="nav-item">
+                    <a class="nav-link text-center {{ $currentSegment === 'daily' ? 'active' : '' }}" href="/daily"><span>SE CONNECTER / S'INSCRIRE</span></a>
                </li>
             </ul>
         </div>
     </div>
 </nav>
-
-{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">PROTCALCUL</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Calculer <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/repertory">Répertoire</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/daily">Journalier</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav> --}}

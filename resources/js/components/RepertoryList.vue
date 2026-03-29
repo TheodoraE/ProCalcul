@@ -12,7 +12,7 @@
     <div class="container mt-5">
         <table class="table">
             <thead>
-                <tr>
+                <tr class="headers">
                     <th scope="col">Aliment</th>
                     <th scope="col" class="text-center">Grammes de protéines pour 100g</th>
                 </tr>
@@ -20,7 +20,7 @@
             <tbody v-for="aliment in aliments" :key="aliment.id">
                 <tr>
                     <th scope="row">{{aliment.name}}</th>
-                    <td class="text-center">{{aliment.proteinDose}}</td>
+                    <td class="text-center">{{aliment.proteinDose}} g</td>
                 </tr>
 
             </tbody>
