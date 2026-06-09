@@ -16,6 +16,7 @@ class CreateDailyusersTable extends Migration
         Schema::create('dailyusers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('aliment_id')->references('id')->on('aliments');
+            $table->foreignId('user_id')->references('id')->on('users');
             $table->float('quantity', 8, 2);
             $table->float('proteins', 8, 2);
             $table->timestamps();

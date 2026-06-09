@@ -1,12 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AlimentController;
 use App\Http\Controllers\CalculController;
 use App\Http\Controllers\DailyController;
 use App\Http\Controllers\DailyuserController;
 use App\Http\Controllers\RepertoryController;
 use App\Http\Controllers\TypeController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +46,9 @@ Route::resource('/daily', DailyController::class);
 
 
 // // Journalier
-// Route::get('/daily', [DailyController::class, 'index']);
+Route::get('/daily', [DailyController::class, 'index']);
 Route::get('/edit-max/{id}', [DailyController::class, 'edit']);
-// Route::post('/update-max/{id}', [DailyController::class, 'update']);
+Route::post('/update-max/{id}', [DailyController::class, 'update']);
 Route::post('/destroy-one/{id}', [DailyController::class, 'destroy']);
 
 Auth::routes();

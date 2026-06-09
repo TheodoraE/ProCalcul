@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\CalculUser;
 use App\Models\Dailyuser;
-use App\Models\MaxProtein;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -14,34 +13,32 @@ class DailyController extends Controller
         // daily + proteins left
         // $calculUser = CalculUser::all();
         // consommation: name, quantity, proteins
-        $users = User::all();
+
+        // $user = User::find(auth()->id());
+        $user = User::first(); // A changer pour récupérer l'utilisateur connecté
         $dailyUsers = Dailyuser::all();
 
         if ($dailyUsers == null){
             $dailyUsers = 0;
         }
 
-        // $maxProteins = MaxProtein::all();
-        return view('pages/daily', compact('users', 'dailyUsers'));
+        return view('pages/daily', compact('user', 'dailyUsers'));
     }
 
     public function edit($id)
     {
-        // $edit = MaxProtein::find($id);
-        // return view('pages/edit', compact('edit'));
+        $edit = User::find($id);
+        return view('pages/edit', compact('edit'));
     }
 
     public function update(Request $request, $id)
     {
-        // $maxProteins = MaxProtein::all();
-        // $users = User::all();
+        $user = User::findOrFail($id);
 
+        $user->maxProtein = $request->input('max_proteins');
+        $user->save();
 
-        // $update = MaxProtein::find($id);
-        // $update->max_proteins = $request->max_proteins;
-        // $update->save();
-
-        // return redirect('/', compact('maxProteins', 'users'));
+        return redirect('/daily')->with('success', 'Max protein updated.');
     }
 
     public function destroy($id)

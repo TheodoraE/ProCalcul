@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
             AlimentSeeder::class,
 
             UserSeeder::class,
-            // CalculUserSeeder::class,
         ]);
     }
 }

@@ -6,7 +6,7 @@
             <h1 class="text-center">Apport journalier</h1>
         </div>
         <div>
-            <h3>Votre barème de protéines maximales : <span> <b> <a href="/edit-max/">??</a></b> </span> grammes par jour</h3>
+            <h3>Votre barème de protéines maximales : <span> <b> <a href="/edit-max/{{$user->id}}">{{$user.0->maxProtein}}</a></b> </span> grammes par jour</h3>
         </div>
         <div class="dailyActions d-flex justify-content-around w-25 my-4">
             <p>Remettre la table à 0 : </p>

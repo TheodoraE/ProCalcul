@@ -16,6 +16,10 @@
 }
 
 //DAILY PAGE
+#dailyHead h3 a {
+    color: #ffbd59;
+}
+
 .dailyActions p {
     font-size: 18px;
     margin-right: 3%;
@@ -23,4 +27,17 @@
 
 #dailyTable th {
     width: 25%;
+}
+
+#updateMaxProt input {
+    width: 25%;
+    font-size: 18px;
+}
+
+#updateMaxProt button {
+    margin-top: 3%;
+    background-color: #ffbd59;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
