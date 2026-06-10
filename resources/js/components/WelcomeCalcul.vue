@@ -32,7 +32,7 @@
             </div>
 
              <!-- Résultat -->
-            <div class="form-group my-4">
+            <div class="form-group my-3">
                 <label for="proteins">Résultat : </label>
                 <div class="d-flex">
                     <input id="inputResult" type="number" step="0.01" name="proteins" class="form-control" :value="valueResult" disabled>
@@ -115,7 +115,5 @@
 </script>
 
 <style>
-    option{
-        font-size: 15px;
-    }
+
 </style>

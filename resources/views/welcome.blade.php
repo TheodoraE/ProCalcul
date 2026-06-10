@@ -8,8 +8,8 @@
         </div>
 
         <div id="welcomeDescription">
-            <h2>Cette calculatrice vous permets de calculer l'apport en protéines selon votre consommation d'aliments.</h2>
-            <h3 class=""><a href="/">Connectez-vous</a> pour l’ajouter à votre consommation journalière.</h3>
+            <h4>Cette calculatrice vous permets de calculer l'apport en protéines selon votre consommation d'aliments.</h4>
+            <h5 class=""><a href="/">Connectez-vous</a> pour l’ajouter à votre consommation journalière.</h5>
             {{-- <h5 class="">Ajoutez chaque aliment au fur et à mesure de votre consommation sur la journée pour connaître le résultat journalier</h5> --}}
         </div>
 

@@ -29,6 +29,6 @@ class CalculController extends Controller
     //     return view('welcome');
     // }
 
-    
+
 
 }

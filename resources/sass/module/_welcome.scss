@@ -36,7 +36,7 @@ header {
 
 .navbar-brand span {
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 26px;
     color: white;
     letter-spacing: 2px;
 }
@@ -57,7 +57,7 @@ ul li a span {
     text-decoration: none;
     color: white;
     font-weight: bolder;
-    font-size: large;
+    font-size: 16px;
 }
 
 .welcomeContent{
@@ -75,24 +75,24 @@ ul li a span {
 
 // Mid
 label {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 1%;
 }
 
 #inputQtt, #selectName, #inputResult {
     border: solid 2px #ffbd59;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #selectName option {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #btnCalcul {
     background-color: white;
     color: #ffbd59;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     border: solid 2px #ffbd59;
     margin: 2.5% 0%;
@@ -103,7 +103,7 @@ label {
 }
 
 .form-group p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0% 3%;
     color: black;
@@ -112,7 +112,7 @@ label {
 #btnAdd {
     background-color: #ffbd59;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     border: solid 2px #ffbd59;
     margin-top: 1.5%;
@@ -120,14 +120,13 @@ label {
 
 // Bottom
 #welcomeDescription{
-    margin: 5% 0% 3% 0%;
+    margin: 2.5% 0% 0% 0%;
 }
-#welcomeDescription h2{
-    margin: 2% 0% 3% 0%;
+#welcomeDescription h4{
+    margin: 3% 0%;
 }
 
-#welcomeDescription h3 a{
-    // text-decoration: none;
+#welcomeDescription h5 a{
     color: #ffbd59;
 }
 

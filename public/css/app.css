@@ -37,7 +37,7 @@ header {
 
 .navbar-brand span {
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 26px;
   color: white;
   letter-spacing: 2px;
 }
@@ -58,7 +58,7 @@ ul li a span {
   text-decoration: none;
   color: white;
   font-weight: bolder;
-  font-size: large;
+  font-size: 16px;
 }
 
 .welcomeContent {
@@ -75,24 +75,24 @@ ul li a span {
 }
 
 label {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 1%;
 }
 
 #inputQtt, #selectName, #inputResult {
   border: solid 2px #ffbd59;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #selectName option {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #btnCalcul {
   background-color: white;
   color: #ffbd59;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   border: solid 2px #ffbd59;
   margin: 2.5% 0%;
@@ -103,7 +103,7 @@ label {
 }
 
 .form-group p {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0% 3%;
   color: black;
@@ -112,21 +112,21 @@ label {
 #btnAdd {
   background-color: #ffbd59;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   border: solid 2px #ffbd59;
   margin-top: 1.5%;
 }
 
 #welcomeDescription {
-  margin: 5% 0% 3% 0%;
+  margin: 2.5% 0% 0% 0%;
 }
 
-#welcomeDescription h2, #welcomeDescription .h2 {
-  margin: 2% 0% 3% 0%;
+#welcomeDescription h4, #welcomeDescription .h4 {
+  margin: 3% 0%;
 }
 
-#welcomeDescription h3 a, #welcomeDescription .h3 a {
+#welcomeDescription h5 a, #welcomeDescription .h5 a {
   color: #ffbd59;
 }
 
@@ -140,29 +140,41 @@ label {
     background-color: salmon;
   }
 }
+#repertoryHead h3, #repertoryHead .h3 {
+  text-align: center;
+  font-weight: bold;
+  margin: 3% 0%;
+}
+
 #repertory select {
   border: solid 2px #ffbd59;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #repertory select option {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .table {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .headers th {
   color: #ffbd59;
 }
 
-#dailyHead h3 a, #dailyHead .h3 a {
+#dailyHead h3, #dailyHead .h3 {
+  text-align: center;
+  font-weight: bold;
+  margin: 3% 0%;
+}
+
+#dailyHead h5 a, #dailyHead .h5 a {
   color: #ffbd59;
 }
 
 .dailyActions p {
-  font-size: 18px;
+  font-size: 16px;
   margin-right: 3%;
 }
 
@@ -172,7 +184,7 @@ label {
 
 #updateMaxProt input {
   width: 25%;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #updateMaxProt button {
@@ -180,7 +192,7 @@ label {
   background-color: #ffbd59;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /*!

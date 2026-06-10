@@ -13,7 +13,18 @@
                     <a class="nav-link text-center {{ $currentSegment === 'repertory' ? 'active' : '' }}" href="/repertory"><span>RÉPERTOIRE</span></a>
                 </li>
                <li class="nav-item">
-                    <a class="nav-link text-center {{ $currentSegment === 'daily' ? 'active' : '' }}" href="/daily"><span>SE CONNECTER / S'INSCRIRE</span></a>
+                    @auth
+                        <a class="nav-link text-center" href="{{ route('logout') }}"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <span>SE DÉCONNECTER</span>
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    @else
+                        <a class="nav-link text-center {{ $currentSegment === 'login' ? 'active' : '' }}" href="/login"><span>SE CONNECTER / S'INSCRIRE</span></a>
+                    @endauth
                </li>
             </ul>
         </div>

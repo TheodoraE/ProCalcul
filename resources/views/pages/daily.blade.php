@@ -2,11 +2,11 @@
 
 @section('content')
     <div id="dailyHead" class="container">
-        <div class="dailyTitle my-5">
-            <h1 class="text-center">Apport journalier</h1>
+        <div class="dailyTitle mt-3">
+            <h3 class="text-center">Apport journalier</h3>
         </div>
         <div>
-            <h3>Votre barème de protéines maximales : <span> <b> <a href="/edit-max/{{$user->id}}">{{$user.0->maxProtein}}</a></b> </span> grammes par jour</h3>
+            <h5>Votre barème de protéines maximales : <span> <b> <a href="/edit-max/{{$user->id}}">{{$user->maxProtein}}</a></b> </span> grammes par jour</h5>
         </div>
         <div class="dailyActions d-flex justify-content-around w-25 my-4">
             <p>Remettre la table à 0 : </p>
