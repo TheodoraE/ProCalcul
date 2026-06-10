@@ -27,6 +27,7 @@ Route::get('/aliments/getResources',  [AlimentController::class, 'getResources']
 ///////
 Route::resource('/', CalculController::class);
 Route::post('/dailyUser/handle', [DailyuserController::class, 'store']);
+// Route::middleware('auth')->post('/dailyUser/handle', [DailyuserController::class, 'store']);
 
 ////// 2nd page
 // Répertoire / Repertory
@@ -52,5 +53,11 @@ Route::post('/update-max/{id}', [DailyController::class, 'update']);
 Route::post('/destroy-one/{id}', [DailyController::class, 'destroy']);
 
 Auth::routes();
+
+Route::middleware('auth')->get('/auth/user', function () {
+    return response()->json([
+        'user' => Auth::user(),
+    ]);
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

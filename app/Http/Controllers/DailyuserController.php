@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dailyuser;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DailyuserController extends Controller
 {
@@ -39,13 +40,23 @@ class DailyuserController extends Controller
     {
         $validation = $request->validate([
             "aliment_id" => 'required|integer|exists:aliments,id',
+            "user_id" => 'nullable|integer|exists:users,id',
             "quantity" => 'required|numeric',
             "proteins" => 'required|numeric',
         ]);
 
+        $userId = $request->input('user_id', Auth::id());
+
+        if (! $userId) {
+            return response()->json(['message' => 'Unauthorized'], JsonResponse::HTTP_UNAUTHORIZED);
+        } else {
+            $userId = 1; // Temporary hardcoded user ID for testing
+        }
+
         $newEntry = new Dailyuser;
         // aliment_id is a primitive value from the request, not an object
         $newEntry->aliment_id = $request->aliment_id;
+        $newEntry->user_id    = $userId;
         $newEntry->quantity   = $request->quantity;
         $newEntry->proteins   = $request->proteins;
 

@@ -55,7 +55,7 @@
                 csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                 aliments : "",
                 aliment_id : "",
-
+                user_id : null,
                     // Calcul
                 inputQtt : "",
                 quantiteValue : "",
@@ -76,6 +76,16 @@
                         console.log(err);
                     });
             },
+            // getAuthUser() {
+            //     this.axios
+            //         .get("/auth/user")
+            //         .then((res) => {
+            //             this.user_id = res.data.user?.id ?? null;
+            //         })
+            //         .catch((err) => {
+            //             console.log(err);
+            //         });
+            // },
             // Choisir la quantité de nourriture
             // Sélectionner l'aliment
             selectAliment(){
@@ -92,7 +102,7 @@
             saveForm() {
                 this.axios
                 .post("/dailyUser/handle" ,
-                    { aliment_id : this.aliment_id, quantity : this.quantiteValue, proteins : this.valueResult },
+                    { aliment_id : this.aliment_id, user_id : 1, quantity : this.quantiteValue, proteins : this.valueResult },
                     { headers: { 'X-CSRF-TOKEN': this.csrf } }
                 )
 
@@ -109,6 +119,7 @@
         },
         mounted() {
             this.getResources();
+            this.getAuthUser();
             console.log('Component mounted.');
         }
     }
