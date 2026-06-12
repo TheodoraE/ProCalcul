@@ -5,6 +5,9 @@
 
     RewriteEngine On
 
+    # Redirect index.html to index.php
+    RewriteRule ^index\.html$ /index.php [NC,R=301,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
